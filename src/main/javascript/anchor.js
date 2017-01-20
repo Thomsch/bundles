@@ -10,12 +10,14 @@ function Anchor(pos) {
         stroke(0);
 
         fill(0);
+
+        push();
+        translate(-10, -10);
+        rect(this.pos.x, this.pos.y, 20, 20);
+        pop();
+
+        fill(255);
         ellipse(this.pos.x, this.pos.y, this.center * this.scale);
-
-        noFill();
-
-        strokeWeight(1);
-        ellipse(this.pos.x, this.pos.y, this.border * this.scale);
         pop();
     }
 

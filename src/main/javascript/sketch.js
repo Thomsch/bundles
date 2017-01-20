@@ -1,6 +1,7 @@
 var a1;
 var a2;
 var bundles = [];
+var controlLines;
 
 function setup() {
     createCanvas(windowWidth, windowHeight)
@@ -8,6 +9,8 @@ function setup() {
     a2 = new Anchor(createVector(width - width / 4, height / 2));
     a1.connect(a2)
     bundles[0].addLine();
+    controlLines = createSlider(0, 10, 6, 1);
+    controlLines.position(10,10);
 }
 
 function draw() {
